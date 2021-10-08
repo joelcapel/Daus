@@ -2,14 +2,15 @@ package com.company;
 
 public class Player {
     private String name;
-    private int points;
+    private boolean win;
+    private int perdidas = 0, ganadas = 0, partidas = 0;
+    Dado dado = new Dado();
 
-    public Player(String name) {
-        this.name = name;
-        points = 0;
+    public Player() {
+        win = false;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
@@ -17,19 +18,41 @@ public class Player {
         this.name = name;
     }
 
-    public int getPoints(){
-        return points;
+    public boolean getWin() {return win;}
+
+    public void setWin(boolean win) {
+        this.win = win;
     }
 
-    public void setPoints(int points){
-        this.points = points;
+    public void setGanadas(int ganadas) {
+        this.ganadas += ganadas;
+    }
+
+    public void setPartidas(int partidas) {
+        this.partidas += partidas;
+    }
+
+    public void setPerdidas(int perdidas) {
+        this.perdidas += perdidas;
+    }
+
+    public int getGanadas() {
+        return ganadas;
+    }
+
+    public int getPartidas() {
+        return partidas;
+    }
+
+    public int getPerdidas() {
+        return perdidas;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "Player{" +
                 "name='" + name + '\'' +
-                ", points=" + points +
+                ", win=" + win +
                 '}';
     }
 }

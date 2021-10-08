@@ -1,27 +1,26 @@
 package com.company;
 
-public class ConfigGame{
-    private int level;
-    private int numPlayers;
+public class ConfigGame {
 
-    public int getLevel() {
-        return level;
+    private final int dado;
+    private final int jugador;
+
+    public ConfigGame(){
+        this.dado = 3;
+        this.jugador = 2;
+    }
+
+    public int getDado() {
+        return dado;
+    }
+
+    public int getJugador() {
+        return jugador;
     }
 
     public void setLevel(int level) {
-        this.level = level;
     }
 
-    public int getNumPlayers() {
-        return numPlayers;
-    }
-
-    public void setNumPlayers(int numPlayers) {
-        this.numPlayers = numPlayers;
-    }
-
-    public ConfigGame(Player[] playersList){
-        level = 1;
-        numPlayers = 1;
+    public void setNumPlayers(int njug) {
     }
 }
